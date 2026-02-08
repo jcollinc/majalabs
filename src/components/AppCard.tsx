@@ -28,18 +28,25 @@ export default function AppCard({
     >
       {/* Visual card / preview area */}
       <div className="flex-[1.4]">
-        <div
-          className={`relative overflow-hidden rounded-3xl bg-linear-to-br ${app.gradient} p-3 shadow-sm`}
+        <a
+          href={app.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
         >
-          <Image
-            src={app.imageSrc}
-            alt={`${app.name} app screenshot`}
-            width={1200}
-            height={900}
-            className="w-full h-auto rounded-2xl"
-            priority
-          />
-        </div>
+          <div
+            className={`relative overflow-hidden rounded-3xl bg-linear-to-br ${app.gradient} p-3 shadow-sm cursor-pointer transition-transform hover:scale-[1.01]`}
+          >
+            <Image
+              src={app.imageSrc}
+              alt={`${app.name} app screenshot`}
+              width={1200}
+              height={900}
+              className="w-full h-auto rounded-2xl"
+              priority
+            />
+          </div>
+        </a>
       </div>
 
       {/* Text content */}

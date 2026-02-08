@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Maja Labs — Thoughtfully crafted software",
   description:
     "Maja Labs LLC builds beautifully simple apps that solve real everyday problems. Home of PayTogether and myFPL.",
+  icons: {
+    icon: "/images/MAJA.png",
+    apple: "/images/MAJA.png",
+  },
   openGraph: {
     title: "Maja Labs",
     description: "Thoughtfully crafted software",
