@@ -29,7 +29,7 @@ export default function AppCard({
       {/* Visual card / preview area */}
       <div className="flex-[1.4]">
         <div
-          className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${app.gradient} p-3 shadow-sm`}
+          className={`relative overflow-hidden rounded-3xl bg-linear-to-br ${app.gradient} p-3 shadow-sm`}
         >
           <Image
             src={app.imageSrc}
@@ -59,7 +59,7 @@ export default function AppCard({
               key={feature}
               className="flex items-start gap-2 text-sm text-warm-600"
             >
-              <span className="mt-1 block h-1 w-1 flex-shrink-0 rounded-full bg-accent" />
+              <span className="mt-1 block h-1 w-1 shrink-0 rounded-full bg-accent" />
               {feature}
             </li>
           ))}
