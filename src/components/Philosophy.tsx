@@ -7,7 +7,7 @@ const values = [
   },
   {
     title: "Sweat the details",
-    body: "Penny-precision math, sub-second interactions, every edge case considered. The best software feels invisible because someone cared about everything.",
+    body: "Eery edge case considered, thrice. The best software feels invisible because someone cared about everything.",
   },
   {
     title: "Keep it simple",
@@ -17,7 +17,7 @@ const values = [
 
 export default function Philosophy() {
   return (
-    <section className="px-6 pt-20 pb-8 sm:pt-24 sm:pb-12">
+    <section className="px-6 pt-10 pb-6 sm:pt-10 sm:pb-6">
       <div className="mx-auto max-w-4xl">
         {/* Section header */}
         <div className="mb-14 text-center">
@@ -47,7 +47,7 @@ export default function Philosophy() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center opacity-90 mix-blend-multiply">
+        <div className="mt-6 flex justify-center opacity-90 mix-blend-multiply">
           <Image
             src="/images/MAJA.png"
             alt=""

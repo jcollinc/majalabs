@@ -29,7 +29,7 @@ export default function AppCard({
       {/* Visual card / preview area */}
       <div className="flex-[1.4]">
         <div
-          className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${app.gradient} p-4 shadow-sm`}
+          className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${app.gradient} p-3 shadow-sm`}
         >
           <Image
             src={app.imageSrc}
