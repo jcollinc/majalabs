@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <div className="relative z-40 bg-cream-50">
+      <div className="relative z-40">
         <Apps />
         <Philosophy />
         <Footer />

@@ -31,12 +31,14 @@ export default function Hero() {
 
   return (
     <>
-      {/* Fixed hero overlay with door effect */}
+      {/* Layer 1: Doors & Background (z-30) 
+          Sits BEHIND the scrolling content (z-40). 
+          This allows the main content to slide OVER the doors as they open. 
+      */}
       <div
-        className="fixed inset-0 z-50"
+        className="fixed inset-0 z-30 pointer-events-none"
         style={{
           visibility: isFullyOpen ? "hidden" : "visible",
-          pointerEvents: isFullyOpen ? "none" : "auto",
         }}
       >
         {/* Left door panel */}
@@ -50,28 +52,35 @@ export default function Hero() {
           style={{ transform: `translateX(${eased * 100}%)` }}
         />
 
-        {/* Radial glow behind logo */}
+        {/* Radial glow */}
         <div
-          className="pointer-events-none absolute inset-0"
-          aria-hidden="true"
+          className="absolute inset-0"
           style={{
             background:
               "radial-gradient(ellipse 60% 50% at 50% 45%, var(--color-cream-100) 0%, transparent 70%)",
             opacity: 1 - eased,
           }}
         />
+      </div>
 
-        {/* Centered hero content */}
-        <div
-          className="relative z-10 flex h-full flex-col items-center justify-center px-6 cursor-pointer"
-          onClick={handleEnter}
-          onKeyDown={(e) => e.key === "Enter" && handleEnter()}
-          role="button"
-          tabIndex={0}
-          aria-label="Click to enter site"
-        >
-          {/* Split logo: MAJA ← → LABS */}
-          <div className="flex items-baseline gap-[0.35em]">
+      {/* Layer 2: Text & Interactive Elements (z-50)
+          Sits ON TOP OF the scrolling content (z-40).
+          The text splits and reveals the content underneath.
+      */}
+      <div
+        className="fixed inset-0 z-50 flex flex-col items-center justify-center px-6 cursor-pointer"
+        onClick={handleEnter}
+        onKeyDown={(e) => e.key === "Enter" && handleEnter()}
+        role="button"
+        tabIndex={0}
+        aria-label="Click to enter site"
+        style={{
+          visibility: isFullyOpen ? "hidden" : "visible",
+          pointerEvents: isFullyOpen ? "none" : "auto",
+        }}
+      >
+        {/* Split logo: MAJA ← → LABS */}
+        <div className="flex items-baseline gap-[0.35em]">
             <span
               className="text-embossed text-5xl font-semibold tracking-[0.25em] uppercase text-warm-600 sm:text-6xl md:text-7xl lg:text-8xl select-none will-change-transform"
               style={{ transform: `translateX(${-eased * 50}vw)` }}
@@ -84,57 +93,56 @@ export default function Hero() {
             >
               Labs
             </span>
-          </div>
+        </div>
 
-          {/* Ornamental flourish underline */}
-          <div
-            className="mt-4 w-[260px] sm:w-[320px] opacity-40"
-            style={{ opacity: Math.max(0, 0.4 - eased * 1.0) }}
+        {/* Ornamental flourish underline */}
+        <div
+          className="mt-4 w-[260px] sm:w-[320px] opacity-40"
+          style={{ opacity: Math.max(0, 0.4 - eased * 1.0) }}
+        >
+          <Image
+            src="/images/misc/underline.svg"
+            alt=""
+            width={375}
+            height={375}
+            className="w-full h-auto"
+            aria-hidden="true"
+            priority
+          />
+        </div>
+
+        {/* Tagline */}
+        <p
+          className="mt-6 max-w-md text-lg font-light tracking-wide text-warm-400 sm:text-xl"
+          style={{ opacity: Math.max(0, 1 - eased * 2) }}
+        >
+          Thoughtfully crafted software
+        </p>
+
+        {/* Subtle scroll hint — pinned to bottom */}
+        <div
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce"
+          style={{ opacity: Math.max(0, (1 - eased * 3) * 0.5) }}
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 20 20"
+            fill="none"
+            className="text-warm-400/40"
           >
-            <Image
-              src="/images/misc/underline.svg"
-              alt=""
-              width={375}
-              height={375}
-              className="w-full h-auto"
-              aria-hidden="true"
-              priority
+            <path
+              d="M10 4v12m0 0l-4-4m4 4l4-4"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
-          </div>
-
-          {/* Tagline */}
-          <p
-            className="mt-6 max-w-md text-lg font-light tracking-wide text-warm-400 sm:text-xl"
-            style={{ opacity: Math.max(0, 1 - eased * 2) }}
-          >
-            Thoughtfully crafted software
-          </p>
-
-          {/* Subtle scroll hint — pinned to bottom */}
-          <div
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce"
-            style={{ opacity: Math.max(0, (1 - eased * 3) * 0.5) }}
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 20 20"
-              fill="none"
-              className="text-warm-400/40"
-            >
-              <path
-                d="M10 4v12m0 0l-4-4m4 4l4-4"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+          </svg>
         </div>
       </div>
 
-      {/* In-flow spacer — scrolling through this drives the door animation */}
+      {/* In-flow spacer */}
       <div className="h-screen" aria-hidden="true" />
     </>
   );

@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="px-6 pb-12 pt-20">
+    <footer className="px-6 pb-12 pt-8">
       {/* Divider */}
       <div className="divider mx-auto max-w-xl" />
 
-      <div className="mx-auto mt-12 max-w-5xl">
+      <div className="mx-auto mt-8 max-w-5xl">
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
           <p className="text-embossed text-sm font-semibold uppercase tracking-[0.25em] text-warm-500 select-none">

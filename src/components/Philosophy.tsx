@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const values = [
   {
     title: "Solve real problems",
@@ -15,10 +17,10 @@ const values = [
 
 export default function Philosophy() {
   return (
-    <section className="px-6 py-32 sm:py-40">
+    <section className="px-6 pt-20 pb-8 sm:pt-24 sm:pb-12">
       <div className="mx-auto max-w-4xl">
         {/* Section header */}
-        <div className="mb-20 text-center">
+        <div className="mb-14 text-center">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-warm-400">
             Philosophy
           </p>
@@ -43,6 +45,16 @@ export default function Philosophy() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center opacity-90 mix-blend-multiply">
+          <Image
+            src="/images/MAJA.png"
+            alt=""
+            width={400}
+            height={400}
+            className="w-32 sm:w-48 h-auto grayscale-[20%] contrast-[105%]"
+          />
         </div>
       </div>
     </section>

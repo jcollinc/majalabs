@@ -40,7 +40,7 @@ const apps = [
 
 export default function Apps() {
   return (
-    <section id="apps" className="px-6 py-32 sm:py-40">
+    <section id="apps" className="px-6 pt-24 pb-16 sm:pt-32 sm:pb-24">
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
         <div className="mb-20 text-center">
