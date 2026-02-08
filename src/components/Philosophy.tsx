@@ -7,7 +7,7 @@ const values = [
   },
   {
     title: "Sweat the details",
-    body: "Eery edge case considered, thrice. The best software feels invisible because someone cared about everything.",
+    body: "Every edge case considered, thrice. The best software feels invisible because someone cared about everything.",
   },
   {
     title: "Keep it simple",
@@ -53,7 +53,7 @@ export default function Philosophy() {
             alt=""
             width={400}
             height={400}
-            className="w-32 sm:w-48 h-auto grayscale-[20%] contrast-[105%]"
+            className="w-32 sm:w-48 h-auto grayscale-20 contrast-105"
           />
         </div>
       </div>
