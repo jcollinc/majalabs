@@ -97,7 +97,7 @@ export default function Hero() {
 
         {/* Ornamental flourish underline */}
         <div
-          className="mt-4 w-[260px] sm:w-[320px] opacity-40"
+          className="mt-4 w-65 sm:w-100 opacity-40"
           style={{ opacity: Math.max(0, 0.4 - eased * 1.0) }}
         >
           <Image
