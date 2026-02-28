@@ -29,14 +29,6 @@ export default function Footer() {
             >
               myFPL
             </a>
-            <a
-              href="https://github.com/jcollinc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-soft hover:text-warm-600"
-            >
-              GitHub
-            </a>
           </nav>
 
           {/* Copyright */}
