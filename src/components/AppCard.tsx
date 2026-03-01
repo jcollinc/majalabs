@@ -51,11 +51,11 @@ export default function AppCard({
 
       {/* Text content */}
       <div className="flex-1">
-        <h3 className="text-2xl font-semibold tracking-tight text-warm-800 sm:text-3xl">
+        <h3 className="text-2xl font-semibold tracking-tight text-warm-600 sm:text-3xl">
           {app.name}
         </h3>
 
-        <p className="mt-4 text-base leading-relaxed text-warm-500">
+        <p className="mt-4 text-base leading-relaxed text-warm-600/70">
           {app.description}
         </p>
 
@@ -77,7 +77,7 @@ export default function AppCard({
           {app.stack.map((tech) => (
             <span
               key={tech}
-              className="rounded-full bg-cream-100 px-3 py-1 text-xs font-medium text-warm-500"
+              className="rounded-full bg-cream-100 px-3 py-1 text-xs font-medium text-warm-600/70"
             >
               {tech}
             </span>
@@ -90,7 +90,7 @@ export default function AppCard({
             href={app.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-soft inline-flex items-center gap-2 rounded-full bg-warm-800 px-6 py-2.5 text-sm font-medium text-cream-50 hover:bg-warm-700"
+            className="transition-soft inline-flex items-center gap-2 rounded-full bg-warm-600 px-6 py-2.5 text-sm font-medium text-cream-50 hover:bg-warm-700"
           >
             Open app
             <svg

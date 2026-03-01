@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="mx-auto mt-8 max-w-5xl">
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
-          <p className="text-embossed text-sm font-semibold uppercase tracking-[0.25em] text-warm-500 select-none">
+          <p className="text-embossed text-sm font-semibold uppercase tracking-[0.25em] text-warm-600 select-none">
             Maja Labs
           </p>
 
           {/* Links */}
-          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs text-warm-400">
+          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs text-warm-600/70">
             <a
               href="https://app.paytogether.io"
               target="_blank"
@@ -32,7 +32,7 @@ export default function Footer() {
           </nav>
 
           {/* Copyright */}
-          <p className="text-xs text-warm-400/60">
+          <p className="text-xs text-warm-600/50">
             &copy; {new Date().getFullYear()} Maja Labs LLC. All rights
             reserved.
           </p>

@@ -21,10 +21,10 @@ export default function Philosophy() {
       <div className="mx-auto max-w-4xl">
         {/* Section header */}
         <div className="mb-14 text-center">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-warm-400">
+          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-warm-600">
             Philosophy
           </p>
-          <h2 className="text-embossed text-3xl font-semibold tracking-tight text-warm-700 sm:text-4xl">
+          <h2 className="text-embossed text-3xl font-semibold tracking-tight text-warm-600 sm:text-4xl">
             How we think about building
           </h2>
         </div>
@@ -37,17 +37,17 @@ export default function Philosophy() {
               <p className="mb-4 text-4xl font-extralight text-cream-300">
                 {String(i + 1).padStart(2, "0")}
               </p>
-              <h3 className="text-lg font-semibold tracking-tight text-warm-700">
+              <h3 className="text-lg font-semibold tracking-tight text-warm-600">
                 {value.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-warm-500">
+              <p className="mt-2 text-sm leading-relaxed text-warm-600/70">
                 {value.body}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 flex justify-center opacity-90 mix-blend-multiply">
+        <div className="mt-10 mb-4 flex justify-center opacity-90 mix-blend-multiply">
           <Image
             src="/images/MAJA.png"
             alt=""

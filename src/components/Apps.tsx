@@ -45,10 +45,10 @@ export default function Apps() {
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
         <div className="mb-20 text-center">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-warm-400">
+          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-warm-600">
             Products
           </p>
-          <h2 className="text-embossed text-3xl font-semibold tracking-tight text-warm-700 sm:text-4xl">
+          <h2 className="text-embossed text-3xl font-semibold tracking-tight text-warm-600 sm:text-4xl">
             What we&rsquo;re building
           </h2>
         </div>
