@@ -4,8 +4,6 @@
 
 The marketing site for [Maja Labs LLC](https://majalabs.net) - a small software studio behind [PayTogether](https://paytogether.io) and [myFPL](https://myfpl.co).
 
-![PayTogether](images/paytogether.png)
-![myFPL](images/myfpl.png)
 
 ## About
 
