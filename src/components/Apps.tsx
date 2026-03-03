@@ -8,7 +8,7 @@ const apps = [
       "A collaborative expense-splitting app for roommates, travel companions, and households who share costs. Smart bill splitting with penny-precision, settlement optimization, receipt scanning, and spending analytics.",
     features: [
       "Equal, custom, or percentage-based splits",
-      "Settlement optimization — fewest payments possible",
+      "Settle group balances in the fewest payments possible",
       "AI-powered receipt scanning",
       "Spending trends and category breakdowns",
     ],
