@@ -47,7 +47,7 @@ export default function Philosophy() {
           ))}
         </div>
 
-        <div className="mt-10 mb-4 flex justify-center opacity-90 mix-blend-multiply">
+        <div className="mt-10 mb-4 flex flex-col items-center opacity-90 mix-blend-multiply">
           <Image
             src="/images/MAJA.png"
             alt=""
@@ -55,6 +55,9 @@ export default function Philosophy() {
             height={400}
             className="w-32 sm:w-48 h-auto grayscale-20 contrast-105"
           />
+          <p className="mt-5 text-xs tracking-[0.15em] uppercase text-warm-600/50">
+            Co-Founder &amp; CEO
+          </p>
         </div>
       </div>
     </section>
