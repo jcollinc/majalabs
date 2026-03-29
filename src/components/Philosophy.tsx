@@ -56,7 +56,7 @@ export default function Philosophy() {
             className="w-32 sm:w-48 h-auto grayscale-20 contrast-105"
           />
           <p className="mt-5 text-xs tracking-[0.15em] uppercase text-warm-600/50">
-            Co-Founder &amp; CEO
+            Co-Founder
           </p>
         </div>
       </div>
