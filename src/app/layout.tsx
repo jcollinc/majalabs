@@ -9,15 +9,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Maja Labs — Thoughtfully crafted software",
+  title: "MajaLabs - Thoughtfully crafted software",
   description:
-    "Maja Labs LLC builds beautifully simple apps that solve real everyday problems. Home of PayTogether and myFPL.",
+    "MajaLabs LLC builds beautifully simple apps that solve real everyday problems. Home of PayTogether and myFPL.",
   icons: {
     icon: "/images/MAJA.png",
     apple: "/images/MAJA.png",
   },
   openGraph: {
-    title: "Maja Labs",
+    title: "MajaLabs",
     description: "Thoughtfully crafted software",
     type: "website",
   },

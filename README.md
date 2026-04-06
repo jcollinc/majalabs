@@ -1,13 +1,13 @@
-# Maja Labs
+# MajaLabs
 
 **Thoughtfully crafted software.**
 
-The marketing site for [Maja Labs LLC](https://majalabs.net) - a small software studio behind [PayTogether](https://paytogether.io) and [myFPL](https://myfpl.co).
+The marketing site for [MajaLabs LLC](https://majalabs.net) - a small software studio behind [PayTogether](https://paytogether.io) and [myFPL](https://myfpl.co).
 
 
 ## About
 
-Maja Labs builds beautifully simple apps that solve real everyday problems. This repository contains the company's landing page, featuring product showcases, a philosophy section, and a contact form.
+MajaLabs builds beautifully simple apps that solve real everyday problems. This repository contains the company's landing page, featuring product showcases, a philosophy section, and a contact form.
 
 ### Products
 
@@ -24,4 +24,4 @@ Maja Labs builds beautifully simple apps that solve real everyday problems. This
 
 ## License
 
-All rights reserved. &copy; Maja Labs LLC.
+All rights reserved. &copy; MajaLabs LLC.

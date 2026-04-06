@@ -71,7 +71,7 @@ export default {
     try {
       const resend = new Resend(env.RESEND_API_KEY);
       await resend.emails.send({
-        from: "Maja Labs Contact <contact@majalabs.net>",
+        from: "MajaLabs Contact <contact@majalabs.net>",
         to: env.CONTACT_EMAIL,
         replyTo: email,
         subject: `Contact from ${name}`,

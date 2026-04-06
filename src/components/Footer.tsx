@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
           <p className="text-embossed text-sm font-semibold uppercase tracking-[0.25em] text-warm-600 select-none">
-            Maja Labs
+            MajaLabs
           </p>
 
           {/* Links */}
@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-xs text-warm-600/50">
-            &copy; {new Date().getFullYear()} Maja Labs LLC. All rights
+            &copy; {new Date().getFullYear()} MajaLabs LLC. All rights
             reserved.
           </p>
         </div>
