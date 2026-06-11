@@ -35,7 +35,7 @@ export default function AppCard({
           className="block"
         >
           <div
-            className={`relative overflow-hidden rounded-3xl bg-linear-to-br ${app.gradient} p-3 shadow-sm cursor-pointer transition-transform hover:scale-[1.01]`}
+            className={`relative overflow-hidden rounded-3xl bg-linear-to-br ${app.gradient} p-2 shadow-sm cursor-pointer transition-transform hover:scale-[1.01]`}
           >
             <Image
               src={app.imageSrc}
