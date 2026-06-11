@@ -1,7 +1,43 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const titles = [
+  "Co-Founder",
+  "CEO",
+  "CTO",
+  "CFO",
+  "COO",
+  "CMO",
+  "CIO",
+  "CPO",
+  "CAT",
+  "Actor",
+  "Producer",
+  "Rapper",
+  "Musician",
+  "Thought Leader",
+  "Intern",
+  "Visionary",
+  "Disruptor",
+  "Serial Entrepreneur",
+  "Keynote Speaker",
+  "Growth Hacker",
+  "Middle Manager",
+  "Individual Contributor",
+  "Stakeholder",
+  "Scrum Master",
+];
+
+function shuffled(list: string[]): string[] {
+  const copy = [...list];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
 
 const values = [
   {
@@ -20,6 +56,49 @@ const values = [
 
 export default function Philosophy() {
   const [spinning, setSpinning] = useState(false);
+  const [title, setTitle] = useState("Co-Founder");
+  // Titles are dealt from a shuffled deck: every title appears once
+  // per cycle, in random order, before any can come around again
+  const deckRef = useRef<string[]>([]);
+
+  const [wiggling, setWiggling] = useState(false);
+  const portraitRef = useRef<HTMLImageElement>(null);
+
+  // One-time tap hint when the portrait first scrolls into view; the
+  // wiggle class only activates on coarse-pointer (touch) devices
+  useEffect(() => {
+    const el = portraitRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setWiggling(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.6 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  function spin() {
+    if (spinning) return;
+    setSpinning(true);
+    // Swap the title halfway through the spin, while she faces away
+    setTimeout(() => {
+      if (deckRef.current.length === 0) {
+        deckRef.current = shuffled(titles);
+        // a fresh deck must not deal the on-screen title twice in a row
+        if (deckRef.current[deckRef.current.length - 1] === title) {
+          deckRef.current.unshift(deckRef.current.pop()!);
+        }
+      }
+      setTitle(deckRef.current.pop()!);
+    }, 350);
+  }
 
   return (
     <section className="px-6 pt-10 pb-6 sm:pt-10 sm:pb-6">
@@ -54,18 +133,26 @@ export default function Philosophy() {
 
         <div className="mt-10 mb-4 flex flex-col items-center opacity-90 mix-blend-multiply">
           <Image
+            ref={portraitRef}
             src="/images/MAJA.png"
             alt=""
             width={400}
             height={400}
-            onClick={() => setSpinning(true)}
-            onAnimationEnd={() => setSpinning(false)}
+            onClick={spin}
+            onAnimationEnd={() => {
+              setSpinning(false);
+              setWiggling(false);
+            }}
             className={`w-32 sm:w-48 h-auto grayscale-20 contrast-105 transition-transform hover:scale-[1.02] cursor-pointer select-none ${
-              spinning ? "animate-spin-once" : ""
+              spinning
+                ? "animate-spin-once"
+                : wiggling
+                  ? "pointer-coarse:animate-wiggle"
+                  : ""
             }`}
           />
           <p className="mt-5 text-xs tracking-[0.15em] uppercase text-warm-600/50">
-            Co-Founder
+            {title}
           </p>
         </div>
       </div>
