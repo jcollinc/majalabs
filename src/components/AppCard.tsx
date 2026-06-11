@@ -9,7 +9,6 @@ interface AppInfo {
   learnMoreHref?: string;
   playStoreHref?: string;
   stack: string[];
-  gradient: string;
   imageSrc: string;
 }
 
@@ -35,14 +34,14 @@ export default function AppCard({
           className="block"
         >
           <div
-            className={`relative overflow-hidden rounded-3xl bg-linear-to-br ${app.gradient} p-2 shadow-sm cursor-pointer transition-transform hover:scale-[1.01]`}
+            className="relative overflow-hidden rounded-3xl shadow-[0_3px_10px_rgba(51,43,36,0.12),0_18px_50px_rgba(51,43,36,0.3)] cursor-pointer transition-transform hover:scale-[1.01]"
           >
             <Image
               src={app.imageSrc}
               alt={`${app.name} app screenshot`}
               width={1200}
               height={900}
-              className="w-full h-auto rounded-2xl"
+              className="w-full h-auto"
               priority
             />
           </div>

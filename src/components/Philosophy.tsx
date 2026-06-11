@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const values = [
   {
@@ -16,6 +19,8 @@ const values = [
 ];
 
 export default function Philosophy() {
+  const [spinning, setSpinning] = useState(false);
+
   return (
     <section className="px-6 pt-10 pb-6 sm:pt-10 sm:pb-6">
       <div className="mx-auto max-w-4xl">
@@ -53,7 +58,11 @@ export default function Philosophy() {
             alt=""
             width={400}
             height={400}
-            className="w-32 sm:w-48 h-auto grayscale-20 contrast-105"
+            onClick={() => setSpinning(true)}
+            onAnimationEnd={() => setSpinning(false)}
+            className={`w-32 sm:w-48 h-auto grayscale-20 contrast-105 transition-transform hover:scale-[1.02] cursor-pointer select-none ${
+              spinning ? "animate-spin-once" : ""
+            }`}
           />
           <p className="mt-5 text-xs tracking-[0.15em] uppercase text-warm-600/50">
             Co-Founder

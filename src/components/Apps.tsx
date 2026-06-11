@@ -16,7 +16,6 @@ const apps = [
     learnMoreHref: "https://paytogether.io",
     playStoreHref: "https://play.google.com/store/apps/details?id=app.paytogether",
     stack: ["Next.js", "React", "Firebase", "RevenueCat", "Anthropic"],
-    gradient: "from-[#E8D5CC] to-[#F5E1D8]",
     imageSrc: "/images/paytogether.png",
   },
   {
@@ -34,7 +33,6 @@ const apps = [
     learnMoreHref: "https://myfpl.co/about",
     playStoreHref: "https://play.google.com/store/apps/details?id=com.myfpl.app",
     stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "Anthropic"],
-    gradient: "from-[#E8D5CC] to-[#F5E1D8]",
     imageSrc: "/images/myfpl.png",
   },
 ];
