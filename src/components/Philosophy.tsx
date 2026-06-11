@@ -63,9 +63,12 @@ export default function Philosophy() {
 
   const [wiggling, setWiggling] = useState(false);
   const portraitRef = useRef<HTMLImageElement>(null);
+  // Re-armed only by a full exit, so hovering near the visibility
+  // threshold can't retrigger the hint
+  const wiggleArmedRef = useRef(true);
 
-  // One-time tap hint when the portrait first scrolls into view; the
-  // wiggle class only activates on coarse-pointer (touch) devices
+  // Tap hint whenever the portrait scrolls into view; the wiggle
+  // class only activates on coarse-pointer (touch) devices
   useEffect(() => {
     const el = portraitRef.current;
     if (!el) return;
@@ -73,12 +76,15 @@ export default function Philosophy() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (!entry.isIntersecting) {
+          wiggleArmedRef.current = true;
+          setWiggling(false);
+        } else if (entry.intersectionRatio >= 0.6 && wiggleArmedRef.current) {
+          wiggleArmedRef.current = false;
           setWiggling(true);
-          observer.disconnect();
         }
       },
-      { threshold: 0.6 }
+      { threshold: [0, 0.6] }
     );
     observer.observe(el);
     return () => observer.disconnect();
