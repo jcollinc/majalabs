@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs text-warm-600/70">
             <a
-              href="https://app.paytogether.io"
+              href="https://paytogether.io"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-soft hover:text-warm-600"
@@ -22,7 +22,7 @@ export default function Footer() {
               PayTogether
             </a>
             <a
-              href="https://myfpl.app"
+              href="https://myfpl.co"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-soft hover:text-warm-600"
