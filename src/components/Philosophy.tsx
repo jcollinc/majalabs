@@ -41,16 +41,16 @@ function shuffled(list: string[]): string[] {
 
 const values = [
   {
-    title: "Solve real problems",
-    body: "Every product starts with a genuine personal frustration. If it doesn't make our own lives better, it's not ready for anyone else's.",
+    title: "Build for ourselves",
+    body: "Every product starts with a genuine personal frustration. We build the fix we want, then share it.",
   },
   {
     title: "Sweat the details",
-    body: "Every edge case considered, thrice. The best software feels invisible because someone cared about everything.",
+    body: "Maja has exacting standards and a long memory. We sweat the little things to keep her happy.",
   },
   {
-    title: "Keep it simple",
-    body: "Complexity is easy. Simplicity is earned. We strip away everything that doesn't serve the person using the product.",
+    title: "Keep it fun",
+    body: "We only build things we genuinely enjoy using, and we try to enjoy building them just as much.",
   },
 ];
 
