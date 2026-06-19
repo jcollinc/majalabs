@@ -29,7 +29,7 @@ const apps = [
       "Live points with auto-sub prediction",
       "AI weekly reports & odds-enhanced fixture ratings",
     ],
-    href: "https://myfpl.co",
+    href: "https://www.myfpl.co",
     learnMoreHref: "https://myfpl.co",
     playStoreHref: "https://play.google.com/store/apps/details?id=com.myfpl.app",
     stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "Anthropic"],
