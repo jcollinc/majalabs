@@ -30,7 +30,7 @@ const apps = [
       "AI weekly reports & odds-enhanced fixture ratings",
     ],
     href: "https://myfpl.co",
-    learnMoreHref: "https://myfpl.co/about",
+    learnMoreHref: "https://myfpl.co",
     playStoreHref: "https://play.google.com/store/apps/details?id=com.myfpl.app",
     stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "Anthropic"],
     imageSrc: "/images/myfpl.png",
