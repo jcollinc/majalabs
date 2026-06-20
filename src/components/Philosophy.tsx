@@ -50,7 +50,7 @@ const values = [
   },
   {
     title: "Keep it fun",
-    body: "We only build things we genuinely enjoy using, and we try to enjoy building them just as much.",
+    body: "We only build things we genuinely enjoy using, and we enjoy building them just as much.",
   },
 ];
 
